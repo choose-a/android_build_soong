@@ -20,6 +20,8 @@ import (
 	"runtime"
 	"strings"
 
+	"choose/soong/android"
+
 	"github.com/google/blueprint/proptools"
 )
 
@@ -123,6 +125,8 @@ type variableProperties struct {
 			Cflags []string
 		}
 
+		// include Choose variables
+		Choose android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -243,6 +247,8 @@ type productVariables struct {
 	Target_init_vendor_lib *bool `json:",omitempty"`
 
 	Target_legacy_mutex_handle *bool `json:",omitempty"`
+	// include Choose variables
+	Choose android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
