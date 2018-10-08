@@ -236,7 +236,7 @@ type productVariables struct {
 
 	VendorVars map[string]map[string]string `json:",omitempty"`
 
-	Target_init_vendor_lib *string `json:",omitempty"`
+	Target_init_vendor_lib *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
