@@ -119,6 +119,10 @@ type variableProperties struct {
 			Cflags []string
 		}
 
+		Target_legacy_mutex_handle struct {
+			Cflags []string
+		}
+
 	} `android:"arch_variant"`
 }
 
@@ -237,6 +241,8 @@ type productVariables struct {
 	VendorVars map[string]map[string]string `json:",omitempty"`
 
 	Target_init_vendor_lib *bool `json:",omitempty"`
+
+	Target_legacy_mutex_handle *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
